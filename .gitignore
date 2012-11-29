@@ -4,3 +4,6 @@
 *.jar
 *.war
 *.ear
+
+# Target y compilados
+ejemplo.struts2.h2/target/*

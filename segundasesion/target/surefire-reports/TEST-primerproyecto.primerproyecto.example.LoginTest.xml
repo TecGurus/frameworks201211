@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="1.121" errors="0" skipped="0" tests="2" name="primerproyecto.primerproyecto.example.LoginTest">
+<testsuite failures="0" time="1.162" errors="0" skipped="0" tests="2" name="primerproyecto.primerproyecto.example.LoginTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-7-oracle/jre/lib/i386"/>
@@ -24,7 +24,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/deathknight/workspace/.metadata/.plugins/org.eclipse.m2e.core/launches/m2conf77876740473052675.tmp"/>
+    <property name="classworlds.conf" value="/home/deathknight/workspace/.metadata/.plugins/org.eclipse.m2e.core/launches/m2conf3280517908646473370.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/lib/jvm/java-7-oracle/jre/lib/i386/server:/usr/lib/jvm/java-7-oracle/jre/lib/i386:/usr/lib/jvm/java-7-oracle/jre/../lib/i386:/usr/lib/jvm/java-7-oracle/jre/lib/i386/client:/usr/lib/jvm/java-7-oracle/jre/lib/i386::/usr/java/packages/lib/i386:/lib:/usr/lib"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -58,6 +58,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.676" classname="primerproyecto.primerproyecto.example.LoginTest" name="testLoginSubmit"/>
-  <testcase time="0.44" classname="primerproyecto.primerproyecto.example.LoginTest" name="testConfig"/>
+  <testcase time="0.536" classname="primerproyecto.primerproyecto.example.LoginTest" name="testLoginSubmit"/>
+  <testcase time="0.625" classname="primerproyecto.primerproyecto.example.LoginTest" name="testConfig"/>
 </testsuite>

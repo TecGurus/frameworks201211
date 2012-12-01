@@ -9,8 +9,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<s:form action="Saluda.rock">
+	<s:form action="Saluda.rock" method="get">
 		<s:textfield key="nombre" />
+		<s:textfield key="soltero" />
 		<s:submit />
 	</s:form>
 </body>

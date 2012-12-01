@@ -7,7 +7,7 @@
   
   <context-param>
     <param-name>db.url</param-name>
-    <param-value>jdbc:h2:mem:test;INIT=RUNSCRIPT FROM 'classpath:sql/h2schema.sql'</param-value>
+    <param-value>jdbc:h2:mem:test;DB_CLOSE_DELAY=-1\;runscript from 'classpath:sql/h2schema.sql'</param-value>    
   </context-param>
   <context-param>
     <param-name>db.user</param-name>
@@ -29,16 +29,16 @@
   <servlet>
     <servlet-name>H2Console</servlet-name>
     <servlet-class>org.h2.server.web.WebServlet</servlet-class>
-    <!--
+    
     <init-param>
         <param-name>webAllowOthers</param-name>
         <param-value></param-value>
-    </init-param>
+    </init-param>    
     <init-param>
         <param-name>trace</param-name>
         <param-value></param-value>
     </init-param>
-    -->
+    
     <load-on-startup>1</load-on-startup>    
   </servlet>
   <servlet-mapping>

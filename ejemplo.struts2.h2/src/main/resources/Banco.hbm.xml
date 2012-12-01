@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 1/12/2012 04:06:04 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="javagurus.curso.frameworks.model.Banco" table="BANCO" schema="PUBLIC" catalog="TEST">
+        <id name="idbanco" type="integer">
+            <column name="IDBANCO"/>
+            <generator class="increment" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="50" not-null="true" />
+        </property>        
+    </class>
+</hibernate-mapping>

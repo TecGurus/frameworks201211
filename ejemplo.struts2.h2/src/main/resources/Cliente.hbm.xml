@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 1/12/2012 04:06:04 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Cliente" table="CLIENTE" schema="PUBLIC" catalog="TEST">
+        <id name="idcliente" type="big_decimal">
+            <column name="IDCLIENTE" precision="38" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="banco" class="Banco" fetch="select">
+            <column name="IDBANCO" precision="38" scale="0" not-null="true" />
+        </many-to-one>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="50" not-null="true" />
+        </property>
+        <property name="apaterno" type="string">
+            <column name="APATERNO" length="30" not-null="true" />
+        </property>
+        <property name="amaterno" type="string">
+            <column name="AMATERNO" length="50" not-null="true" />
+        </property>
+        <property name="edad" type="big_decimal">
+            <column name="EDAD" precision="38" scale="0" not-null="true" />
+        </property>
+        <set name="cuentas" table="CUENTA" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="IDCLIENTE" precision="38" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="Cuenta" />
+        </set>
+    </class>
+</hibernate-mapping>

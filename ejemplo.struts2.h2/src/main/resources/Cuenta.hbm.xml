@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 1/12/2012 04:06:04 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Cuenta" table="CUENTA" schema="PUBLIC" catalog="TEST">
+        <id name="idcuenta" type="big_decimal">
+            <column name="IDCUENTA" precision="38" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="tipocuenta" class="Tipocuenta" fetch="select">
+            <column name="IDTIPOCUENTA" precision="38" scale="0" not-null="true" />
+        </many-to-one>
+        <many-to-one name="cliente" class="Cliente" fetch="select">
+            <column name="IDCLIENTE" precision="38" scale="0" not-null="true" />
+        </many-to-one>
+        <property name="numerocuenta" type="big_decimal">
+            <column name="NUMEROCUENTA" precision="38" scale="0" not-null="true" />
+        </property>
+        <set name="movimientos" table="MOVIMIENTO" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="IDCUENTA" precision="38" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="Movimiento" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -3,15 +3,15 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 1/12/2012 04:06:04 AM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="Cuenta" table="CUENTA" schema="PUBLIC" catalog="TEST">
+    <class name="javagurus.curso.frameworks.model.Cuenta" table="CUENTA" schema="PUBLIC" catalog="TEST">
         <id name="idcuenta" type="big_decimal">
             <column name="IDCUENTA" precision="38" scale="0" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="tipocuenta" class="Tipocuenta" fetch="select">
+        <many-to-one name="tipocuenta" class="javagurus.curso.frameworks.model.Tipocuenta" fetch="select">
             <column name="IDTIPOCUENTA" precision="38" scale="0" not-null="true" />
         </many-to-one>
-        <many-to-one name="cliente" class="Cliente" fetch="select">
+        <many-to-one name="cliente" class="javagurus.curso.frameworks.model.Cliente" fetch="select">
             <column name="IDCLIENTE" precision="38" scale="0" not-null="true" />
         </many-to-one>
         <property name="numerocuenta" type="big_decimal">
@@ -21,7 +21,7 @@
             <key>
                 <column name="IDCUENTA" precision="38" scale="0" not-null="true" />
             </key>
-            <one-to-many class="Movimiento" />
+            <one-to-many class="javagurus.curso.frameworks.model.Movimiento" />
         </set>
     </class>
 </hibernate-mapping>

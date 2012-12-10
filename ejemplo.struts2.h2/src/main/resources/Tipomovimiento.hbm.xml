@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 1/12/2012 04:06:04 AM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="Tipomovimiento" table="TIPOMOVIMIENTO" schema="PUBLIC" catalog="TEST">
+    <class name="javagurus.curso.frameworks.model.Tipomovimiento" table="TIPOMOVIMIENTO" schema="PUBLIC" catalog="TEST">
         <id name="idtipomovimiento" type="big_decimal">
             <column name="IDTIPOMOVIMIENTO" precision="38" scale="0" />
             <generator class="assigned" />
@@ -15,7 +15,7 @@
             <key>
                 <column name="IDTIPOMOVIMIENTO" precision="38" scale="0" not-null="true" />
             </key>
-            <one-to-many class="Movimiento" />
+            <one-to-many class="javagurus.curso.frameworks.model.Movimiento" />
         </set>
     </class>
 </hibernate-mapping>

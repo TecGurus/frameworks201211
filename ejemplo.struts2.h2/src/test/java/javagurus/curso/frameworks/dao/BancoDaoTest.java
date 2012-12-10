@@ -19,7 +19,7 @@ public class BancoDaoTest {
 		assertTrue(idBanco != -1);
 	}
 
-	@Test
+	//@Test
 	public void testEliminar() {
 		Banco banco = new Banco();
 		banco.setNombre("Banco 11082012");
@@ -29,7 +29,7 @@ public class BancoDaoTest {
 		assertTrue(eliminado);
 	}
 
-	@Test
+	//@Test
 	public void testActualizar() {
 		Banco banco = new Banco();
 		banco.setNombre("Banco 11082012");
@@ -42,7 +42,7 @@ public class BancoDaoTest {
 		
 	}
 
-	@Test
+	//@Test
 	public void testListar() {
 		List<Banco> bancos = bancoDAO.listar();
 		assertNotNull(bancos);
@@ -54,13 +54,23 @@ public class BancoDaoTest {
 		}
 	}
 
-	@Test
+	//@Test
 	public void testBuscarPorId() {
 		Banco banco = bancoDAO.buscarPorId(1);
 		assertNotNull(banco);
 		System.out.println(banco.getIdbanco());
 		System.out.println(banco.getNombre());
 		
+	}
+	
+	//@Test
+	public void testHibernateSession(){
+		bancoDAO.pruebaHibernateSession();
+	}
+	
+	@Test
+	public void testCriteriaQuering(){
+		bancoDAO.pruebaCriteriaQueryng();
 	}
 
 }
